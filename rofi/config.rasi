@@ -1,0 +1,158 @@
+/*******************************************************************************
+ * ROFI Color theme
+ * User: Rasi
+ * Copyright: Rasmus Steinke
+ *******************************************************************************/
+configuration {
+
+font: "CaskaydiaCove Nerd Font Mono 16";
+
+}
+
+* {
+    selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
+    foreground:                  #458588;
+    normal-foreground:           @foreground;
+    alternate-normal-background: rgba ( 39, 50, 56, 80 % );
+    red:                         rgba ( 220, 50, 47, 100 % );
+    selected-urgent-foreground:  rgba ( 255, 24, 68, 100 % );
+    blue:                        rgba ( 38, 139, 210, 100 % );
+    urgent-foreground:           rgba ( 255, 24, 68, 100 % );
+    alternate-urgent-background: rgba ( 39, 50, 56, 80 % );
+    active-foreground:           rgba ( 128, 203, 196, 100 % );
+    lightbg:                     rgba ( 238, 232, 213, 100 % );
+    selected-active-foreground:  rgba ( 128, 203, 196, 100 % );
+    alternate-active-background: rgba ( 39, 50, 56, 80 % );
+    background:                  rgba ( 39, 50, 56, 80 % );
+    bordercolor:                 rgba ( 7, 2, 2, 100 % );
+    alternate-normal-foreground: @foreground;
+    normal-background:           rgba ( 39, 50, 56, 80 % );
+    lightfg:                     rgba ( 88, 104, 117, 100 % );
+    selected-normal-background:  rgba ( 57, 66, 73, 80 % );
+    border-color:                rgba ( 71, 128, 97, 100 % );	
+    spacing:                     2;
+    separatorcolor:              rgba ( 30, 37, 41, 100 % );
+    urgent-background:           rgba ( 39, 50, 56, 80 % );
+    selected-urgent-background:  rgba ( 57, 66, 73, 80 % );
+    alternate-urgent-foreground: @urgent-foreground;
+    background-color:            rgba ( 0, 0, 0, 0 % );
+    alternate-active-foreground: @active-foreground;
+    active-background:           rgba ( 39, 50, 56, 80 % );
+    selected-active-background:  rgba ( 57, 66, 73, 80 % );
+}
+window {
+    background-color: #282828;
+    border:           2;
+    padding:          5;
+    location: west;
+    height: 150px;
+    width: 400px;
+    orientation: horizontal;
+    x-offset: 10px;
+    y-offset: 10px;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       1px dash 0px 0px ;
+    border-color: #458588;
+    padding:      1px ;
+}
+textbox {
+    text-color: #458588;
+}
+listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: #282828;
+    text-color:       #458588; 
+} 
+element.normal.urgent {
+    background-color: #282828;
+    text-color:       #458588;
+}
+element.normal.active {
+    background-color: #282828;
+    text-color:       #458588;
+}
+element.selected.normal {
+    background-color:#282828;
+    text-color:      #fabd2f;
+}
+element.selected.urgent {
+    background-color: #282828;
+    text-color:       #458588;
+}
+element.selected.active {
+    background-color:#282828;
+    text-color:      #b8bb26;
+}
+element.alternate.normal {
+    background-color:#282828;
+    text-color:      #458588;
+}
+element.alternate.urgent {
+    background-color:#282828;
+    text-color:      #b8bb26;
+}
+element.alternate.active {
+    background-color: #282828;
+    text-color:       #fbf1c7;
+}
+scrollbar {
+    width:        0px ;
+    border:       0;
+    handle-width: 0px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       2px dash 0px 0px ;
+    border-color: #458588;
+}
+button.selected {
+    background-color: #282828;
+    text-color:       #458588;
+}
+inputbar {
+    spacing:    0;
+    text-color: #458588;
+    padding:    1px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: #458588;
+}
+entry {
+    spacing:    0;
+    text-color: #fb4934;
+}
+prompt {
+    spacing:    0;
+    text-color: #b8bb26;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    text-color: #458588;
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: #b8bb26;
+}
