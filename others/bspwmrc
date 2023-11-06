@@ -1,0 +1,18 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor -d Start a b c d e
+
+bspc config border_width         5
+bspc config window_gap          30
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# Border colors
+bspc config normal_border_color "#d6cfcf"
+bspc config focused_border_color "#d6cfcf"
+bspc config urgent_border_color "#d6cfcf"
+bspc config presel_border_color "#d6cfcf"
